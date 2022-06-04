@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 
 import deathValley from '../../images/deathValley.JPG';
 
+
 const Home = () => {
   return (
     <div>
-      <div className='intro'>
+      <div className='intro' style={{backgroundImage: `url(${deathValley})`}}>
         <span>I like to travel</span>
       </div>
       <div className='page'>

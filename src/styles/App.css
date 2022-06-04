@@ -3,7 +3,7 @@ body {
 }
 
 .intro {
-  background-image: url('../images/deathValley.JPG');
+  /* background-image: url('../images/deathValley.JPG'); */
   width: 100%;
   height: 500px;
   background-position: center;
