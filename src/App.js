@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  BrowserRouter
+} from "react-router-dom";
+
+import Narwhal from './components/Narwhal/Narwhal'
+import Blogs from './components/blog/Blogs'
+import Home from './components/home/Home'
+import NotFound from './components/notfound/NotFound'
+import Projects from './components/project/Projects';
+
+import ResponsiveAppBar from './components/ResponsiveAppBar';
 
 function App() {
+  const date = new Date
+  const year = date.getYear() + 1900
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/blogs' element={<Blogs/>} />
+          <Route path='/projects' element={<Projects/>} />
+          <Route path ='/narwhal' element={<Narwhal/>} />
+          <Route path ='*' element={<NotFound/>} />
+        </Routes>    
+        <ResponsiveAppBar />
+
+        {/* <nav>
+          <ol>
+          <li><Link to='/' >Blogs</Link></li>
+            <li><Link to='/manatee' >Manatee</Link></li>
+            <li><Link to='/narwhal' >Narwhal</Link></li>
+            <li><Link to='/whale' >Whale</Link></li>
+          </ol>
+        </nav> */}
+      </BrowserRouter>
+      <footer style={{marginLeft:'20vw',marginRight:'20vw'}}>
+        <hr />
+        <div>© {year} Ernest Viola</div>
+      </footer>
     </div>
+
   );
 }
 
