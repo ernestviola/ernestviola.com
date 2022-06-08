@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ernestviola-dev-224018-authRole",
+      "UnauthRoleArn": "arn:aws:iam::888844109494:role/amplify-ernestviola-dev-224018-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::888844109494:role/amplify-ernestviola-dev-224018-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ernestviola-dev-224018-deployment",
+      "UnauthRoleName": "amplify-ernestviola-dev-224018-unauthRole",
+      "StackName": "amplify-ernestviola-dev-224018",
+      "StackId": "arn:aws:cloudformation:us-east-1:888844109494:stack/amplify-ernestviola-dev-224018/7c0c6ef0-e6ed-11ec-849b-0ecf7e927879",
+      "AmplifyAppId": "d2o4lgb40a17r1"
+    },
+    "categories": {
+      "function": {
+        "ernestviolaTriggerae5cfa19": {
+          "deploymentBucketName": "amplify-ernestviola-dev-224018-deployment",
+          "s3Key": "amplify-builds/ernestviolaTriggerae5cfa19-6b417a32466a47555464-build.zip"
+        },
+        "ernestviolablogs": {
+          "deploymentBucketName": "amplify-ernestviola-dev-224018-deployment",
+          "s3Key": "amplify-builds/ernestviolablogs-64507467544a766f546a-build.zip"
+        }
+      }
+    }
+  }
+}

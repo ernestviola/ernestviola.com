@@ -1,0 +1,16 @@
+{
+  "resourceName": "ernestviola",
+  "tableName": "blogs",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "name",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "ernestviolaTriggerae5cfa19"
+  ]
+}

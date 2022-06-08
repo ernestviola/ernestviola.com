@@ -20,6 +20,8 @@ function App() {
   const date = new Date
   const year = date.getYear() + 1900
 
+  console.log(process.env.PUBLIC_URL)
+
   return (
     <div className="wrapper">
       <BrowserRouter>
