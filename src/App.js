@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
+        <ResponsiveAppBar />
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/blogs' element={<Blogs/>} />
@@ -32,7 +33,7 @@ function App() {
           <Route path ='/narwhal' element={<Narwhal/>} />
           <Route path ='*' element={<NotFound/>} />
         </Routes>    
-        <ResponsiveAppBar />
+        
 
         {/* <nav>
           <ol>

@@ -31,7 +31,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <React.Fragment>
-      <AppBar className='nav' style={{ background: '#F4F0E8', textColor: 'black'}}>
+      <AppBar className='nav' style={{ background: '#F4F0E8', textColor: 'black', position: 'sticky', top: 0}}>
         <Toolbar sx={{marginLeft:'15vw',marginRight:'15vw'}}>
         <Link to='/' onClick={()=> setValue()}>ernestviola.com</Link>
           {
