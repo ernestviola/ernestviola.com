@@ -1,13 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import useProgressiveImg from './useProgressiveImg';
+
 import deathValley from '../../images/deathValley.JPG';
+import deathValleySmall from '../../images/deathValleySmall.JPG';
 
 
 const Home = () => {
+  const [src, setSrc] = useState(deathValleySmall);
+  const [blur, setBlur] = useState(true);
+
+  const img = new Image()
+
+  img.src = deathValley;
+  
+  img.onload = () => {
+    setBlur(false)
+    setSrc(deathValley);
+  };
+
+  // style={{backgroundImage: `url(${deathValley})`}}
   return (
     <div>
-      <div className='intro' style={{backgroundImage: `url(${deathValley})`}}>
+      <div className='intro' >
+        <img
+        src={src}
+        style={{
+          filter: blur ? "blur(20px)" : "none",
+          transition: blur ? "none" : "filter 0.2s ease-out"
+        }}
+        />
         <span>I like to travel</span>
       </div>
       <div className='page'>
