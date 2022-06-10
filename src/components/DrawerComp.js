@@ -15,7 +15,7 @@ const DrawerComp = () => {
                 <ListItemButton onClick={()=>setOpenDrawer(false)} key={0}><ListItemText>Blog</ListItemText></ListItemButton>
             </List>
         </Drawer>
-        <IconButton sx= {{color:'white',marginLeft:'auto'}} onClick={()=>setOpenDrawer(!openDrawer)}>
+        <IconButton sx= {{color:'black',marginLeft:'auto'}} onClick={()=>setOpenDrawer(!openDrawer)}>
             <MenuIcon />
         </IconButton>
     </React.Fragment>
