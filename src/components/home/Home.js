@@ -27,8 +27,8 @@ const Home = () => {
         <img
         src={src}
         style={{
-          filter: blur ? "blur(20px)" : "none",
-          transition: blur ? "none" : "filter 0.2s ease-out"
+          filter: blur ? "blur(50px)" : "none",
+          transition: blur ? "none" : "filter 0.5s ease-out"
         }}
         />
         <span>I like to travel</span>

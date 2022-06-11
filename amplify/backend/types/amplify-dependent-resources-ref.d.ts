@@ -1,12 +1,12 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "ernestviolaTriggerae5cfa19": {
+        "ernestviolaTrigger438a2024": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
         },
-        "ernestviolablogs": {
+        "ernestviolaBlogLambda": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
@@ -20,16 +20,25 @@ export type AmplifyDependentResourcesAttributes = {
             "StreamArn": "string",
             "PartitionKeyName": "string",
             "PartitionKeyType": "string",
-            "SortKeyName": "string",
-            "SortKeyType": "string",
             "Region": "string"
         }
     },
     "api": {
-        "ernestviolablogs": {
+        "ernestviolaBlog": {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"
+        }
+    },
+    "auth": {
+        "ernestviola": {
+            "IdentityPoolId": "string",
+            "IdentityPoolName": "string",
+            "UserPoolId": "string",
+            "UserPoolArn": "string",
+            "UserPoolName": "string",
+            "AppClientIDWeb": "string",
+            "AppClientID": "string"
         }
     }
 }

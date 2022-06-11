@@ -1,6 +1,6 @@
 {
   "function": {
-    "ernestviolaTriggerae5cfa19": {
+    "ernestviolaTrigger438a2024": {
       "service": "Lambda",
       "providerPlugin": "awscloudformation",
       "build": true,
@@ -16,7 +16,7 @@
         }
       ]
     },
-    "ernestviolablogs": {
+    "ernestviolaBlogLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
@@ -43,19 +43,45 @@
     }
   },
   "api": {
-    "ernestviolablogs": {
+    "ernestviolaBlog": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "ernestviolablogs",
+          "resourceName": "ernestviolaBlogLambda",
           "attributes": [
             "Name",
             "Arn"
           ]
         }
       ]
+    }
+  },
+  "auth": {
+    "ernestviola": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
     }
   }
 }

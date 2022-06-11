@@ -9,17 +9,21 @@
       "UnauthRoleName": "amplify-ernestviola-dev-224018-unauthRole",
       "StackName": "amplify-ernestviola-dev-224018",
       "StackId": "arn:aws:cloudformation:us-east-1:888844109494:stack/amplify-ernestviola-dev-224018/7c0c6ef0-e6ed-11ec-849b-0ecf7e927879",
-      "AmplifyAppId": "d2o4lgb40a17r1"
+      "AmplifyAppId": "d2o4lgb40a17r1",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-ernestviola-dev-224018-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
+      "auth": {
+        "undefined": {}
+      },
       "function": {
-        "ernestviolaTriggerae5cfa19": {
+        "ernestviolaTrigger438a2024": {
           "deploymentBucketName": "amplify-ernestviola-dev-224018-deployment",
-          "s3Key": "amplify-builds/ernestviolaTriggerae5cfa19-6b417a32466a47555464-build.zip"
+          "s3Key": "amplify-builds/ernestviolaTrigger438a2024-6b61596a5674694b5237-build.zip"
         },
-        "ernestviolablogs": {
+        "ernestviolaBlogLambda": {
           "deploymentBucketName": "amplify-ernestviola-dev-224018-deployment",
-          "s3Key": "amplify-builds/ernestviolablogs-64507467544a766f546a-build.zip"
+          "s3Key": "amplify-builds/ernestviolaBlogLambda-37794347577150384163-build.zip"
         }
       }
     }
