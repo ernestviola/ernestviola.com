@@ -16,13 +16,13 @@
     "s3Key": {
       "Type": "String"
     },
-    "storageernestviolaName": {
+    "storageernestviolaDynamoName": {
       "Type": "String",
-      "Default": "storageernestviolaName"
+      "Default": "storageernestviolaDynamoName"
     },
-    "storageernestviolaArn": {
+    "storageernestviolaDynamoArn": {
       "Type": "String",
-      "Default": "storageernestviolaArn"
+      "Default": "storageernestviolaDynamoArn"
     }
   },
   "Conditions": {
@@ -55,12 +55,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "ernestviolaBlogLambda",
+            "ernestviolalambda",
             {
               "Fn::Join": [
                 "",
                 [
-                  "ernestviolaBlogLambda",
+                  "ernestviolalambda",
                   "-",
                   {
                     "Ref": "env"
@@ -97,12 +97,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "ernestviolaLambdaRolefbc53c0f",
+            "ernestviolaLambdaRoleb80aadc2",
             {
               "Fn::Join": [
                 "",
                 [
-                  "ernestviolaLambdaRolefbc53c0f",
+                  "ernestviolaLambdaRoleb80aadc2",
                   "-",
                   {
                     "Ref": "env"
@@ -182,14 +182,14 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storageernestviolaArn"
+                  "Ref": "storageernestviolaDynamoArn"
                 },
                 {
                   "Fn::Join": [
                     "/",
                     [
                       {
-                        "Ref": "storageernestviolaArn"
+                        "Ref": "storageernestviolaDynamoArn"
                       },
                       "index/*"
                     ]

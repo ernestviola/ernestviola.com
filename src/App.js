@@ -13,6 +13,7 @@ import Blogs from './components/blog/Blogs'
 import Home from './components/home/Home'
 import NotFound from './components/notfound/NotFound'
 import Projects from './components/project/Projects';
+import Login from './components/login/login'
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/blogs' element={<Blogs/>} />
           <Route path='/projects' element={<Projects/>} />
           <Route path ='/narwhal' element={<Narwhal/>} />
+          <Route path ='/login' element={<Login/>} />
           <Route path ='*' element={<NotFound/>} />
         </Routes>    
         

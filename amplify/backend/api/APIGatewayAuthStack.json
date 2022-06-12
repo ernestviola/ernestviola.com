@@ -11,7 +11,7 @@
     "env": {
       "Type": "String"
     },
-    "ernestviolaBlog": {
+    "ernestviola": {
       "Type": "String"
     }
   },
@@ -52,7 +52,7 @@
                       },
                       ":",
                       {
-                        "Ref": "ernestviolaBlog"
+                        "Ref": "ernestviola"
                       },
                       "/",
                       {
@@ -82,7 +82,7 @@
                       },
                       ":",
                       {
-                        "Ref": "ernestviolaBlog"
+                        "Ref": "ernestviola"
                       },
                       "/",
                       {
@@ -135,7 +135,7 @@
                       },
                       ":",
                       {
-                        "Ref": "ernestviolaBlog"
+                        "Ref": "ernestviola"
                       },
                       "/",
                       {
@@ -165,7 +165,7 @@
                       },
                       ":",
                       {
-                        "Ref": "ernestviolaBlog"
+                        "Ref": "ernestviola"
                       },
                       "/",
                       {

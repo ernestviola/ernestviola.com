@@ -1,0 +1,12 @@
+{
+  "resourceName": "ernestviolaDynamo",
+  "tableName": "blog",
+  "partitionKey": {
+    "fieldName": "uuid",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "ernestviolaDynamoTriggerf74d0feb"
+  ]
+}

@@ -5,17 +5,17 @@
     "env": {
       "Type": "String"
     },
-    "storageernestviolaName": {
+    "storageernestviolaDynamoName": {
       "Type": "String",
-      "Default": "storageernestviolaName"
+      "Default": "storageernestviolaDynamoName"
     },
-    "storageernestviolaArn": {
+    "storageernestviolaDynamoArn": {
       "Type": "String",
-      "Default": "storageernestviolaArn"
+      "Default": "storageernestviolaDynamoArn"
     },
-    "storageernestviolaStreamArn": {
+    "storageernestviolaDynamoStreamArn": {
       "Type": "String",
-      "Default": "storageernestviolaArn"
+      "Default": "storageernestviolaDynamoArn"
     },
     "deploymentBucketName": {
       "Type": "String"
@@ -46,12 +46,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "ernestviolaTrigger438a2024",
+            "ernestviolaDynamoTriggerf74d0feb",
             {
               "Fn::Join": [
                 "",
                 [
-                  "ernestviolaTrigger438a2024",
+                  "ernestviolaDynamoTriggerf74d0feb",
                   "-",
                   {
                     "Ref": "env"
@@ -92,12 +92,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "ernestviolaLambdaRole438a2024",
+            "ernestviolaDynamoLambdaRolef74d0feb",
             {
               "Fn::Join": [
                 "",
                 [
-                  "ernestviolaLambdaRole438a2024",
+                  "ernestviolaDynamoLambdaRolef74d0feb",
                   "-",
                   {
                     "Ref": "env"
@@ -168,13 +168,13 @@
         }
       }
     },
-    "ernestviolaTriggerPolicy": {
+    "ernestviolaDynamoTriggerPolicy": {
       "DependsOn": [
         "LambdaExecutionRole"
       ],
       "Type": "AWS::IAM::Policy",
       "Properties": {
-        "PolicyName": "lambda-trigger-policy-ernestviola",
+        "PolicyName": "lambda-trigger-policy-ernestviolaDynamo",
         "Roles": [
           {
             "Ref": "LambdaExecutionRole"
@@ -193,7 +193,7 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storageernestviolaStreamArn"
+                  "Ref": "storageernestviolaDynamoStreamArn"
                 }
               ]
             }
@@ -201,16 +201,16 @@
         }
       }
     },
-    "ernestviolaTrigger": {
+    "ernestviolaDynamoTrigger": {
       "Type": "AWS::Lambda::EventSourceMapping",
       "DependsOn": [
-        "ernestviolaTriggerPolicy"
+        "ernestviolaDynamoTriggerPolicy"
       ],
       "Properties": {
         "BatchSize": 100,
         "Enabled": true,
         "EventSourceArn": {
-          "Ref": "storageernestviolaStreamArn"
+          "Ref": "storageernestviolaDynamoStreamArn"
         },
         "FunctionName": {
           "Fn::GetAtt": [

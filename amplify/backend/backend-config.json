@@ -1,13 +1,13 @@
 {
   "function": {
-    "ernestviolaTrigger438a2024": {
+    "ernestviolaDynamoTriggerf74d0feb": {
       "service": "Lambda",
       "providerPlugin": "awscloudformation",
       "build": true,
       "dependsOn": [
         {
           "category": "storage",
-          "resourceName": "ernestviola",
+          "resourceName": "ernestviolaDynamo",
           "attributes": [
             "Name",
             "Arn",
@@ -16,14 +16,14 @@
         }
       ]
     },
-    "ernestviolaBlogLambda": {
+    "ernestviolalambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
       "dependsOn": [
         {
           "category": "storage",
-          "resourceName": "ernestviola",
+          "resourceName": "ernestviolaDynamo",
           "attributes": [
             "Name",
             "Arn"
@@ -37,25 +37,9 @@
     }
   },
   "storage": {
-    "ernestviola": {
+    "ernestviolaDynamo": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
-    }
-  },
-  "api": {
-    "ernestviolaBlog": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "ernestviolaBlogLambda",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
-        }
-      ]
     }
   },
   "auth": {
@@ -82,6 +66,22 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "api": {
+    "ernestviola": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "ernestviolalambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   }
 }

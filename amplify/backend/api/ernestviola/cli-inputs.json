@@ -3,7 +3,7 @@
   "paths": {
     "/blogs": {
       "name": "/blogs",
-      "lambdaFunction": "ernestviolaBlogLambda",
+      "lambdaFunction": "ernestviolalambda",
       "permissions": {
         "setting": "protected",
         "auth": [
