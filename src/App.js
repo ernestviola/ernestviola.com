@@ -14,6 +14,9 @@ import Home from './components/home/Home'
 import NotFound from './components/notfound/NotFound'
 import Projects from './components/project/Projects';
 import Login from './components/login/login'
+import SignIn from './components/authorization/SignIn';
+import CheckUser from './components/authorization/CheckUser';
+import LogOut from './components/authorization/LogOut';
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 
@@ -21,7 +24,7 @@ function App() {
   const date = new Date
   const year = date.getYear() + 1900
 
-  console.log(process.env.PUBLIC_URL)
+  // console.log(process.env.PUBLIC_URL)
 
   return (
     <div className="wrapper">
@@ -33,6 +36,9 @@ function App() {
           <Route path='/projects' element={<Projects/>} />
           <Route path ='/narwhal' element={<Narwhal/>} />
           <Route path ='/login' element={<Login/>} />
+          <Route path ='/signin' element={<SignIn/>} />
+          <Route path ='/logout' element={<LogOut/>} />
+          <Route path ='/checkuser' element={<CheckUser/>} />
           <Route path ='*' element={<NotFound/>} />
         </Routes>    
         
