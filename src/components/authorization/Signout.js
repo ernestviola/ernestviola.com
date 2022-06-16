@@ -9,10 +9,10 @@ const Logout = () => {
             console.log('error signing out: ', error);
         }
     }
-
   return (
     <div>
         <button onClick={SignOut}>Log Out</button>
+        Help
     </div>
   )
 }
