@@ -1,7 +1,7 @@
 import React from 'react'
 import { Auth } from 'aws-amplify';
 
-const LogOut = () => {
+const Logout = () => {
     async function SignOut() {
         try {
             await Auth.signOut();
@@ -17,4 +17,4 @@ const LogOut = () => {
   )
 }
 
-export default LogOut
+export default Logout

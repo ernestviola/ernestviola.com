@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import { Auth } from 'aws-amplify';
 
-const SignIn = () => {
+const Login = () => {
     const [username,setUsername] = useState();
     const [password,setPassword] = useState();
 
@@ -26,10 +26,10 @@ const SignIn = () => {
             <label >Password:
             <input type="text" name="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
             </label>
-            <input type="submit" value="Sign In" />
+            <input type="submit" value="Login" />
         </form>
     </div>
   )
 }
 
-export default SignIn
+export default Login

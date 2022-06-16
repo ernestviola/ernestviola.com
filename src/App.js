@@ -1,10 +1,8 @@
 import './styles/App.css';
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   BrowserRouter
 } from "react-router-dom";
 
@@ -13,16 +11,16 @@ import Blogs from './components/blog/Blogs'
 import Home from './components/home/Home'
 import NotFound from './components/notfound/NotFound'
 import Projects from './components/project/Projects';
-import Login from './components/login/login'
-import SignIn from './components/authorization/SignIn';
+import Login from './components/authorization/Login';
+import Logout from './components/authorization/Logout';
 import CheckUser from './components/authorization/CheckUser';
-import LogOut from './components/authorization/LogOut';
+
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 
 function App() {
-  const date = new Date
-  const year = date.getYear() + 1900
+  const date = new Date();
+  const year = date.getYear() + 1900;
 
   // console.log(process.env.PUBLIC_URL)
 
@@ -36,8 +34,7 @@ function App() {
           <Route path='/projects' element={<Projects/>} />
           <Route path ='/narwhal' element={<Narwhal/>} />
           <Route path ='/login' element={<Login/>} />
-          <Route path ='/signin' element={<SignIn/>} />
-          <Route path ='/logout' element={<LogOut/>} />
+          <Route path ='/logout' element={<Logout/>} />
           <Route path ='/checkuser' element={<CheckUser/>} />
           <Route path ='*' element={<NotFound/>} />
         </Routes>    

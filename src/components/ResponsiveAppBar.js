@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-import {AppBar, Tab, Tabs, Toolbar, Typography, useMediaQuery, useTheme} from '@mui/material'
+import {AppBar, Tab, Tabs, Toolbar, useMediaQuery, useTheme} from '@mui/material'
 import DrawerComp from './DrawerComp';
 
 import { Link, useLocation } from 'react-router-dom';

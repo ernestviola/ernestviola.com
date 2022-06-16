@@ -1,7 +1,5 @@
 import React from 'react'
-import {API, Auth} from 'aws-amplify';
-
-import {withAuthenticator} from '@aws-amplify/ui-react';
+import {Auth} from 'aws-amplify';
 
 const CheckUser = () => {
     async function callApi() {

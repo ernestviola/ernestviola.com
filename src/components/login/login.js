@@ -5,21 +5,21 @@ import {withAuthenticator} from '@aws-amplify/ui-react';
 
 const login = () => {
     async function callApi() {
-        // const user = await Auth.currentAuthenticatedUser()
-        // const token = user.signInUserSession.accessToken.jwtToken
+        const user = await Auth.currentAuthenticatedUser()
+        const token = user.signInUserSession.accessToken.jwtToken
 
-        // // .signInUserSession.idToken.jwtToken
+        // .signInUserSession.idToken.jwtToken
 
-        // console.log(token)
+        console.log(token)
 
-        // const requestInfo = {
-        //     headers: {
-        //         Authorization: token
-        //     }
-        // }
+        const requestInfo = {
+            headers: {
+                Authorization: token
+            }
+        }
 
-        // const data = await API.get('ernestviolaBlog','/blog',requestInfo)
-        // console.log({data})
+        const data = await API.get('ernestviolaBlog','/blog',requestInfo)
+        console.log({data})
     }
     
   return (
