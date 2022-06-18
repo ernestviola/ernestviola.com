@@ -14,16 +14,23 @@
     },
     "categories": {
       "auth": {
-        "undefined": {}
+        "undefined": {},
+        "ernestviola": {}
       },
       "function": {
         "ernestviolaDynamoTriggerf74d0feb": {
           "deploymentBucketName": "amplify-ernestviola-prod-103732-deployment",
-          "s3Key": "amplify-builds/ernestviolaDynamoTriggerf74d0feb-4f507756734d734b7549-build.zip"
+          "s3Key": "amplify-builds/ernestviolaDynamoTriggerf74d0feb-774a3170507748656a41-build.zip"
         },
         "ernestviolalambda": {
           "deploymentBucketName": "amplify-ernestviola-prod-103732-deployment",
-          "s3Key": "amplify-builds/ernestviolalambda-683632624d6135764338-build.zip"
+          "s3Key": "amplify-builds/ernestviolalambda-6d4b4d79686f6535674e-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d37bgvxa8s14h5",
+          "type": "cicd"
         }
       }
     }
