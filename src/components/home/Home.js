@@ -11,14 +11,14 @@ const Home = () => {
   const [src, setSrc] = useState(deathValleySmall);
   const [blur, setBlur] = useState(true);
 
-  // const img = new Image()
+  const img = new Image()
 
-  // img.src = deathValley;
+  img.src = deathValley;
   
-  // img.onload = () => {
-  //   setBlur(false)
-  //   setSrc(deathValley);
-  // };
+  img.onload = () => {
+    setBlur(false)
+    setSrc(deathValley);
+  };
 
   // style={{backgroundImage: `url(${deathValley})`}}
   return (
@@ -26,10 +26,10 @@ const Home = () => {
       <div className='intro' >
         <img
         src={src}
-        // style={{
-        //   filter: blur ? "blur(50px)" : "none",
-        //   transition: blur ? "none" : "filter 0.5s ease-out"
-        // }}
+        style={{
+          filter: blur ? "blur(50px)" : "none",
+          transition: blur ? "none" : "filter 0.5s ease-out"
+        }}
         />
         <span>I like to travel</span>
       </div>
