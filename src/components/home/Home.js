@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 import useProgressiveImg from './useProgressiveImg';
 
-import deathValley from '../../images/deathValley.JPG';
-import deathValleySmall from '../../images/deathValleySmall.JPG';
+import deathValley from '../../images/deathValley.jpg';
+import deathValleySmall from '../../images/deathValleySmall.jpg';
 
 
 const Home = () => {
