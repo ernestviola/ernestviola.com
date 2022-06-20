@@ -38,9 +38,7 @@ const Blogs = () => {
    
     return (
         <div className="page">
-            <div>NAME LIST</div>
-            {/* <SearchBar searchFunction={filterNames} /> */}
-            {/* <Lists usernames={users} /> */}
+            <h1>Blogs</h1>
         </div>
     );
 }

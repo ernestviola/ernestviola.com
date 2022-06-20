@@ -41,7 +41,7 @@ const Home = () => {
               
               <p>Some things I enjoy are playing guitar, traveling, and learning about people. I hope that in the future I can have a positive impact on the world, either through lifting up a community or through the environment conservation and I believe I could do this by working on my computer science and programming skills</p>
 
-              <h3>About this website</h3>
+              <h2>About this website</h2>
               <p>I've designed a personal website many times over the years, and they generally don't come out to what I expect them to be. The biggest hurdle for me is trying to overengineer the heck out of it. So this time, I'm keeping it simple and will add things as I go! </p>
               
               <p>The frontend here is running on react and the backend is node which is interfacing with the frontend via API.</p>    
