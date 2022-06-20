@@ -1,3 +1,4 @@
+import '../styles/ResponsiveAppBar.css'
 import React, {useEffect, useState} from 'react'
 
 import {AppBar, Tab, Tabs, Toolbar, useMediaQuery, useTheme} from '@mui/material'
@@ -20,9 +21,6 @@ const ResponsiveAppBar = () => {
       case '/projects':
         setValue(1)
         break;
-      case '/narwhal':
-        setValue(2)
-        break;
     }
   })
 
@@ -31,9 +29,9 @@ const ResponsiveAppBar = () => {
 
   return (
     <React.Fragment>
-      <AppBar className='nav' style={{ background: '#F4F0E8', textColor: 'black', position: 'sticky', top: 0}}>
-        <Toolbar sx={{marginLeft:'15vw',marginRight:'15vw'}}>
-        <Link to='/' onClick={()=> setValue()}>ernestviola.com</Link>
+      <AppBar className='nav'>
+        <Toolbar className='navContent'>
+        <Link to='/' onClick={()=> setValue()} style={{fontFamily: 'Lobster', fontSize: '30px'}}>ernestviola.com</Link>
           {
             isMatch ? (
               <>
@@ -45,7 +43,6 @@ const ResponsiveAppBar = () => {
                 <Tabs sx={{marginLeft:'auto'}} textColor='inherit' value={value} indicatorColor='primary'>
                   <Tab key={0} label='Blog' component={Link} to='/blogs'/>
                   <Tab key={1} label='Projects' component={Link} to='/projects'/>
-                  <Tab key={2} label='Narwhal' component={Link} to='/narwhal'/>
                 </Tabs>
               </>
             )

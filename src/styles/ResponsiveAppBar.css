@@ -1,0 +1,17 @@
+.nav {
+    background: #F4F0E8 !important;
+    color: black !important;
+    position: sticky !important;
+}
+
+
+/* .navContent {
+    margin: 0 15vw 0 15vw;
+} */
+
+@media only screen and (min-width: 768px) {
+    .navContent {
+        margin: 0 15vw 0 15vw !important;
+    }
+  }
+

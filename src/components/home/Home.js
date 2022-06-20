@@ -1,7 +1,7 @@
+import '../../styles/Home.css'
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-import useProgressiveImg from './useProgressiveImg';
 
 import deathValley from '../../images/deathValley.jpg';
 import deathValleySmall from '../../images/deathValleySmall.jpg';
@@ -30,6 +30,7 @@ const Home = () => {
           filter: blur ? "blur(50px)" : "none",
           transition: blur ? "none" : "filter 0.5s ease-out"
         }}
+        alt='Ernest doing a handstand in death valley, CA'
         />
         <span>I like to travel</span>
       </div>
