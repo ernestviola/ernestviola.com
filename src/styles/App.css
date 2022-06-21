@@ -5,7 +5,7 @@ body {
 }
 
 .page {
-  margin-top: 5vh;
+  margin-top: 2vh;
   margin-left: 10vw;
   margin-right: 10vw;
 }
@@ -53,13 +53,13 @@ footer hr {
 
 /* Text */
 
-h1,h2,h3 {
+/* h1,h2,h3 {
   font-family: 'Dancing Script', cursive;
 }
 
-p {
+p,span{
   font-family: 'Roboto', sans-serif;
-}
+} */
 
 a {
   text-decoration: underline;

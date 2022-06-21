@@ -32,21 +32,19 @@ const Home = () => {
         }}
         alt='Ernest doing a handstand in death valley, CA'
         />
-        <span>I like to travel</span>
+        <div className='introContent'>
+          <h1 className='desktop'>If I were to describe myself in one word, that word would be, Storyteller.</h1>
+          <h1 className='mobile'>A Storyteller.</h1>
+        </div>
       </div>
       <div className='page'>
             
               <h1>About Me</h1>
-              <p>First of all, welcome to my website. If you want to see some of my projects go ahead and click on <Link to='/projects'>projects</Link>.</p>
+              <p>First of all, welcome to my website! I am an aspiring <b>software engineer</b> and an aspiring old person, by that I really mean an aspiring <b>storyteller</b>. I hope that with this blog I can showcase some of my projects as well as add a bit of personality to some of the things I experience in life.</p>
               
-              <p>Some things I enjoy are playing guitar, traveling, and learning about people. I hope that in the future I can have a positive impact on the world, either through lifting up a community or through the environment conservation and I believe I could do this by working on my computer science and programming skills</p>
+              <p>My dad, also named Ernest, always said to leave a place better than how you found it. That's my goal in life, to make an impact on the world around me and to be a positive influence.</p>
 
-              <h2>About this website</h2>
-              <p>I've designed a personal website many times over the years, and they generally don't come out to what I expect them to be. The biggest hurdle for me is trying to overengineer the heck out of it. So this time, I'm keeping it simple and will add things as I go! </p>
-              
-              <p>The frontend here is running on react and the backend is node which is interfacing with the frontend via API.</p>    
-              
-              <p>The <Link to='/blogs'>blog</Link> isn't setup yet... but will be eventually. </p>
+              <p>I will be making a <Link to='/blogs'>blog</Link> soon and hopefully my writing won't be that atrocies. I never got an A in writing class but who cares.</p>
           </div>
 
     </div>
