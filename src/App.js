@@ -50,7 +50,9 @@ function App() {
         </BrowserRouter>
         <footer>
           <hr />
-          <div>© {year} Ernest Viola</div>
+          <div>
+            © {year} Ernest Viola <a href="https://github.com/ernestviola">github</a>
+          </div>
         </footer>
       </div>
 
