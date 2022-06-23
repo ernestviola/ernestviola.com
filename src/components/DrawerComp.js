@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Drawer, IconButton, List, ListItemButton, ListItemText } from '@mui/material'
 
+import { Link, useLocation } from 'react-router-dom';
+
 import MenuIcon from '@mui/icons-material/Menu';
 
 
@@ -12,7 +14,8 @@ const DrawerComp = () => {
     <React.Fragment>
         <Drawer open={openDrawer} onClose={()=>setOpenDrawer(false)}>
             <List>
-                <ListItemButton onClick={()=>setOpenDrawer(false)} key={0}><ListItemText>Blog</ListItemText></ListItemButton>
+                <ListItemButton  onClick={()=>setOpenDrawer(false)} key={0} component={Link} to='/blogs'><ListItemText>Blog</ListItemText></ListItemButton>
+                <ListItemButton onClick={()=>setOpenDrawer(false)} key={1} component={Link} to='/projects'><ListItemText>Projects</ListItemText></ListItemButton>
             </List>
         </Drawer>
         <IconButton sx= {{color:'black',marginLeft:'auto'}} onClick={()=>setOpenDrawer(!openDrawer)}>

@@ -7,7 +7,7 @@ import DrawerComp from './DrawerComp';
 import { Link, useLocation } from 'react-router-dom';
 
 const ResponsiveAppBar = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(false);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
