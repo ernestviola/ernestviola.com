@@ -18,12 +18,9 @@ import CheckUser from './components/authorization/CheckUser';
 
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
+import Footer from './components/footer/Footer';
 
 function App() {
-  const date = new Date();
-  const year = date.getYear() + 1900;
-  
-
   return (
       <div className='wrapper'>
         <BrowserRouter>
@@ -36,24 +33,9 @@ function App() {
             <Route path ='/logout' element={<Logout/>} />
             <Route path ='/checkuser' element={<CheckUser/>} />
             <Route path ='*' element={<NotFound/>} />
-          </Routes>    
-          
-
-          {/* <nav>
-            <ol>
-            <li><Link to='/' >Blogs</Link></li>
-              <li><Link to='/manatee' >Manatee</Link></li>
-              <li><Link to='/narwhal' >Narwhal</Link></li>
-              <li><Link to='/whale' >Whale</Link></li>
-            </ol>
-          </nav> */}
+          </Routes>
         </BrowserRouter>
-        <footer>
-          <hr />
-          <div>
-            © {year} Ernest Viola <a href="https://github.com/ernestviola">github</a>
-          </div>
-        </footer>
+        <Footer />
       </div>
 
   );

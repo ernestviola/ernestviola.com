@@ -10,22 +10,6 @@ body {
   margin-right: 10vw;
 }
 
-footer {
-  color: rgb(86, 86, 86);
-  margin-left: 10vw;
-  margin-right: 10vw;
-}
-
-footer hr { 
-  display: block; height: 1px;
-  border: 0; border-top: 1px solid;
-  margin: 1em 0; padding: 0; 
-  border-color: inherit;
-}
-
-
-/* style={{marginLeft:'20vw',marginRight:'20vw'}} */
-
 /* Media Query */
 
 @media only screen and (min-width: 768px) {
@@ -34,19 +18,6 @@ footer hr {
     margin-left: 20vw;
     margin-right: 20vw;
   } 
-
-  footer {
-    color: rgb(86, 86, 86);
-    margin-left: 20vw;
-    margin-right: 20vw;
-  }
-  
-  footer hr { 
-    display: block; height: 1px;
-    border: 0; border-top: 1px solid;
-    margin: 1em 0; padding: 0; 
-    border-color: inherit;
-  }
 
 }
 
