@@ -1,0 +1,27 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ernestviola-prod-162620-authRole",
+      "UnauthRoleArn": "arn:aws:iam::888844109494:role/amplify-ernestviola-prod-162620-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::888844109494:role/amplify-ernestviola-prod-162620-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ernestviola-prod-162620-deployment",
+      "UnauthRoleName": "amplify-ernestviola-prod-162620-unauthRole",
+      "StackName": "amplify-ernestviola-prod-162620",
+      "StackId": "arn:aws:cloudformation:us-east-1:888844109494:stack/amplify-ernestviola-prod-162620/0f57d290-02ea-11ed-b2f0-0a355d31f951",
+      "AmplifyAppId": "d1n2k5giib6zhx",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-ernestviola-prod-162620-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "undefined": {}
+      },
+      "function": {
+        "blogsLambda": {
+          "deploymentBucketName": "amplify-ernestviola-prod-162620-deployment",
+          "s3Key": "amplify-builds/blogsLambda-637667524e334f793863-build.zip"
+        }
+      }
+    }
+  }
+}

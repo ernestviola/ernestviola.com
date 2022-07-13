@@ -1,0 +1,10 @@
+{
+  "resourceName": "ernestviolaBlogs",
+  "tableName": "blogs",
+  "partitionKey": {
+    "fieldName": "uuid",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
