@@ -6,13 +6,27 @@ import DrawerComp from './DrawerComp';
 
 import { Link, useLocation } from 'react-router-dom';
 
-const ResponsiveAppBar = () => {
-  const [value, setValue] = useState(false);
+import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+
+const ResponsiveAppBar = ({signOut,user}) => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
-  const path = useLocation().pathname;
 
+  const [value, setValue] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+
+  
+
+
+
+
+
+
+
+
+  const path = useLocation().pathname;
   useEffect(() => {
     switch (path) {
       case '/blogs':
@@ -47,7 +61,6 @@ const ResponsiveAppBar = () => {
               </>
             )
           }
-          
         </Toolbar>
         
       </AppBar>
