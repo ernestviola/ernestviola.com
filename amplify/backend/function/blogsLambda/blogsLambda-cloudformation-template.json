@@ -16,13 +16,13 @@
     "s3Key": {
       "Type": "String"
     },
-    "storageernestviolaBlogsName": {
+    "storageblogsDBName": {
       "Type": "String",
-      "Default": "storageernestviolaBlogsName"
+      "Default": "storageblogsDBName"
     },
-    "storageernestviolaBlogsArn": {
+    "storageblogsDBArn": {
       "Type": "String",
-      "Default": "storageernestviolaBlogsArn"
+      "Default": "storageblogsDBArn"
     }
   },
   "Conditions": {
@@ -97,12 +97,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "ernestviolaLambdaRolee4d100fb",
+            "ernestviolaLambdaRolecafa25db",
             {
               "Fn::Join": [
                 "",
                 [
-                  "ernestviolaLambdaRolee4d100fb",
+                  "ernestviolaLambdaRolecafa25db",
                   "-",
                   {
                     "Ref": "env"
@@ -182,14 +182,14 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storageernestviolaBlogsArn"
+                  "Ref": "storageblogsDBArn"
                 },
                 {
                   "Fn::Join": [
                     "/",
                     [
                       {
-                        "Ref": "storageernestviolaBlogsArn"
+                        "Ref": "storageblogsDBArn"
                       },
                       "index/*"
                     ]

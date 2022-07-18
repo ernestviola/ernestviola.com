@@ -8,7 +8,6 @@ import '@aws-amplify/ui-react/styles.css';
 const CreateBlog = ({ signOut, user }) => {
 
   async function callApi() {
-    const user = await Auth.currentAuthenticatedUser()
     const token = user.signInUserSession.accessToken.jwtToken
     console.log(token)
 
@@ -16,19 +15,19 @@ const CreateBlog = ({ signOut, user }) => {
     console.log('uuid:')
     console.log(uuid)
 
+    // const requestInfo = {
+    //   body: {
+    //     'uuid': uuid,
+    //     'content':'This is my first blog post.'
+    //   },
+    //   headers: {
+    //     Authorization: token
+    //   }
+    // }
+    const data = await API.get('blogsApi','/blogs/uuid/uuid2',{})
+    
 
 
-    const requestInfo = {
-      body: {
-        'uuid': uuid,
-        'content':'This is my first blog post.'
-      },
-      headers: {
-        Authorization: token
-      }
-    }
-    const data = await API.get('ernestviola','/blogs')
-    // const data = await API.get('ernestviola','/blogs',requestInfo)
     console.log(data)
 
 

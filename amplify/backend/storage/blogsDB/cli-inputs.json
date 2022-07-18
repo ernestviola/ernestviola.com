@@ -1,6 +1,6 @@
 {
-  "resourceName": "ernestviolaBlogs",
-  "tableName": "blogs",
+  "resourceName": "blogsDB",
+  "tableName": "blogsDB",
   "partitionKey": {
     "fieldName": "uuid",
     "fieldType": "string"

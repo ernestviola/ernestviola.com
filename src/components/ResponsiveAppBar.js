@@ -19,13 +19,6 @@ const ResponsiveAppBar = ({signOut,user}) => {
 
   
 
-
-
-
-
-
-
-
   const path = useLocation().pathname;
   useEffect(() => {
     switch (path) {

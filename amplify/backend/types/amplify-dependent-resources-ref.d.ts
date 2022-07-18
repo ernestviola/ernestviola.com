@@ -1,6 +1,17 @@
 export type AmplifyDependentResourcesAttributes = {
+    "auth": {
+        "ernestviolae68da909": {
+            "IdentityPoolId": "string",
+            "IdentityPoolName": "string",
+            "UserPoolId": "string",
+            "UserPoolArn": "string",
+            "UserPoolName": "string",
+            "AppClientIDWeb": "string",
+            "AppClientID": "string"
+        }
+    },
     "storage": {
-        "ernestviolaBlogs": {
+        "blogsDB": {
             "Name": "string",
             "Arn": "string",
             "StreamArn": "string",
@@ -15,17 +26,6 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
-        }
-    },
-    "auth": {
-        "ernestviola": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
-            "UserPoolId": "string",
-            "UserPoolArn": "string",
-            "UserPoolName": "string",
-            "AppClientIDWeb": "string",
-            "AppClientID": "string"
         }
     },
     "api": {

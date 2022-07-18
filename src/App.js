@@ -17,6 +17,7 @@ import Logout from './components/authorization/Logout';
 import CheckUser from './components/authorization/CheckUser';
 
 import CreateBlog from './components/blog/CreateBlog';
+import Test from './components/blog/Test'
 
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
@@ -31,6 +32,9 @@ function App() {
             <Route path='/' element={<Home/>} />
             <Route path='/blogs' element={<Blogs/>} />
             <Route path='/createblog' element={<CreateBlog/>} />
+            <Route path='/test' element={<Test/>} />
+
+
             <Route path='/projects' element={<Projects/>} />
             <Route path ='/login' element={<Login/>} />
             <Route path ='/logout' element={<Logout/>} />
