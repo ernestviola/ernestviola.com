@@ -6,8 +6,6 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 import Blogs from './components/blog/Blogs';
 import Home from './components/home/Home';
 import NotFound from './components/notfound/NotFound'
