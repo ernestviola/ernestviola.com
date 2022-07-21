@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
-const CreateBlog = ({ signOut, user }) => {
+const Create = ({ signOut, user }) => {
 
   async function callApi() {
     const token = user.signInUserSession.accessToken.jwtToken
@@ -15,15 +15,6 @@ const CreateBlog = ({ signOut, user }) => {
     console.log('uuid:')
     console.log(uuid)
 
-    // const requestInfo = {
-    //   body: {
-    //     'uuid': uuid,
-    //     'content':'This is my first blog post.'
-    //   },
-    //   headers: {
-    //     Authorization: token
-    //   }
-    // }
     const data = await API.get('blogsApi','/blogs/uuid/uuid2',{})
     
 
@@ -47,4 +38,4 @@ const CreateBlog = ({ signOut, user }) => {
   )
 }
 
-export default withAuthenticator(CreateBlog)
+export default withAuthenticator(Create)

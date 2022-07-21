@@ -6,16 +6,14 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
-import Blogs from './components/blog/Blogs';
+
 import Home from './components/home/Home';
 import NotFound from './components/notfound/NotFound'
 import Projects from './components/project/Projects';
-import Login from './components/authorization/Login';
-import Logout from './components/authorization/Logout';
-import CheckUser from './components/authorization/CheckUser';
 
-import CreateBlog from './components/blog/CreateBlog';
-import Test from './components/blog/Test'
+
+import Blogs from './components/blog/Blogs';
+import Createblog from './components/blog/Create';
 
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
@@ -28,16 +26,12 @@ function App() {
           <ResponsiveAppBar />
           <Routes>
             <Route path='/' element={<Home/>} />
+            
             <Route path='/blogs' element={<Blogs/>} />
-            <Route path='/createblog' element={<CreateBlog/>} />
-            <Route path='/test' element={<Test/>} />
-
+            <Route path='/blog/create' element={<Createblog/>} />
 
             <Route path='/projects' element={<Projects/>} />
-            <Route path ='/login' element={<Login/>} />
-            <Route path ='/logout' element={<Logout/>} />
-
-            <Route path ='/checkuser' element={<CheckUser/>} />
+            
             <Route path ='*' element={<NotFound/>} />
           </Routes>
         </BrowserRouter>
