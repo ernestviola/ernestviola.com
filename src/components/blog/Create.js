@@ -14,8 +14,8 @@ const Create = ({ signOut, user }) => {
   const [title,setTitle] = useState('')
   // const [markdownPreview,setMarkdownPreview] = useState('')
 
-  function logPreview() {
-    console.log(markdown)
+  const handleMarkdown = (e) => {
+    setMarkdown(e.currentTarget.textContent)
   }
 
   const handleSubmit = (e) => {
@@ -37,11 +37,12 @@ const Create = ({ signOut, user }) => {
 
 
   return (
-    <div>
+    <div className='page'>
         <h1>Create a blog</h1>
+        <div className='title' placeholder='Title' contentEditable='true' value={title} onInput={(e) => setTitle(e.currentTarget.textContent)}></div>
         <div className='blogPreview'>
-          <div className='title' contentEditable='true' value={title} onInput={(e) => setTitle(e.currentTarget.textContent)}></div>
-          <div className='markdown' contentEditable='true' value={markdown} onInput={(e) => setMarkdown(e.currentTarget.textContent)}></div>
+          
+          <div className='markdown' contentEditable='true' value={markdown} onInput={handleMarkdown}></div>
           {/* <textarea value={markdown} onChange={(e) => setMarkdown(e.target.value)}>
             
           </textarea> */}
