@@ -3,6 +3,7 @@ import React, {useState,useEffect} from 'react';
 import {API, Auth} from 'aws-amplify';
 import axios from "axios";
 
+import { Link } from 'react-router-dom';
 import Lists from '../List';
 import SearchBar from '../SearchBar';
 
@@ -24,8 +25,7 @@ const Blogs = () => {
             <ul>
               {blogs.map(blog => 
                 <li key= {blog.uuid}>
-                  {blog.title}
-                  {blog.content}
+                  <Link to={`/blog/${blog.uuid}`}>{blog.title}</Link>
                 </li>
               )}
             </ul>
