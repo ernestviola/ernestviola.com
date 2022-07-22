@@ -17,7 +17,6 @@ const Read = () => {
         const resData = await API.get('blogsApi','/blogs/object/'+ uuid)
         setBlog(resData)
 
-        console.log(resData)
     }
         
     useEffect(() => {
