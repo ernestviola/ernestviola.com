@@ -1,39 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+
 import {API, Auth} from 'aws-amplify';
 import { v4 as uuidv4 } from 'uuid';
 
-import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import '../../styles/blog/Create.css'
 
 const Create = ({ signOut, user }) => {
 
-  async function callApi() {
-    const token = user.signInUserSession.accessToken.jwtToken
-    console.log(token)
+  const [markdown,setMarkdown] = useState('')
+  const [title,setTitle] = useState('')
+  // const [markdownPreview,setMarkdownPreview] = useState('')
+
+  function logPreview() {
+    console.log(markdown)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
     let uuid = uuidv4();
-    console.log('uuid:')
-    console.log(uuid)
 
-    const data = await API.get('blogsApi','/blogs/uuid/uuid2',{})
-    
+    API.post('blogsApi','/blogs', {
+        body : {
+            uuid,
+            title,
+            content : markdown
+        }
+    })
+    .then(blogRes => console.log(blogRes))
+
+}
 
 
-    console.log(data)
 
-
-  }
   return (
-    <div className='page'>
+    <div>
         <h1>Create a blog</h1>
-        <form>
-          <textarea></textarea>
-        </form>
-        <button onClick={callApi}>Create</button>
+        <div className='blogPreview'>
+          <div className='title' contentEditable='true' value={title} onInput={(e) => setTitle(e.currentTarget.textContent)}></div>
+          <div className='markdown' contentEditable='true' value={markdown} onInput={(e) => setMarkdown(e.currentTarget.textContent)}></div>
+          {/* <textarea value={markdown} onChange={(e) => setMarkdown(e.target.value)}>
+            
+          </textarea> */}
+          <ReactMarkdown children={markdown} className='markdownPreview'></ReactMarkdown>
+        </div>
 
+        <button onClick={handleSubmit}>Create</button>
         <Button onClick={signOut}>Sign out</Button>
-
-
     </div>
   )
 }
