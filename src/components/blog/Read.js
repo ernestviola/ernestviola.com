@@ -4,7 +4,7 @@ import React, {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 
 import {API} from 'aws-amplify';
-import ReactMarkdown from 'react-markdown'
+import CustomEditor from '../CustomEditor';
 
 const Read = () => {
 
@@ -26,10 +26,7 @@ const Read = () => {
 
   return (
     <div className='page'>
-        <h1>{blog.title}</h1>
-        <ReactMarkdown>
-            {blog.content}
-        </ReactMarkdown>
+        <CustomEditor readOnly={true} />
     </div>
   )
 }

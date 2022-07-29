@@ -11,9 +11,10 @@ import Home from './components/home/Home';
 import NotFound from './components/notfound/NotFound'
 import Projects from './components/project/Projects';
 
-import Blog from './components/blog/Read'
 import Blogs from './components/blog/Blogs';
 import Createblog from './components/blog/Create';
+import Readblog from './components/blog/Read'
+import Updateblog from './components/blog/Update';
 
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
@@ -26,9 +27,12 @@ function App() {
           <ResponsiveAppBar />
           <Routes>
             <Route path='/' element={<Home/>} />
-            <Route path='/blog/:uuid' element={<Blog/>} />
+            
             <Route path='/blogs' element={<Blogs/>} />
+            
             <Route path='/blog/create' element={<Createblog/>} />
+            <Route path='/blog/:uuid' element={<Readblog/>} />
+            <Route path='/blog/update/:uuid' element={<Updateblog/>} />
 
             <Route path='/projects' element={<Projects/>} />
             
