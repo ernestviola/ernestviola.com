@@ -15,6 +15,8 @@ import '../../styles/blog/Create.css'
 
 const Update = ({ signOut, user }) => {
     const [contentState, setContentState] = useState('')
+    const [loading, setLoading] = useState(true)
+    const [title, setTitle] = useState('')
     let { uuid } = useParams()
 
     const onChange = (data) => {
@@ -29,6 +31,8 @@ const Update = ({ signOut, user }) => {
         const resData = await API.put('blogsApi', '/blogs', {
             body: {
                 uuid,
+                title,
+                content: contentText,
                 updated_at: date
             }
         })
@@ -36,19 +40,32 @@ const Update = ({ signOut, user }) => {
         console.log(resData)
     }
 
-    // useEffect(() => {
-    //     getBlog()
-    // },[])
 
+    const fetchBlog = async () => {
+
+        const resData = await API.get('blogsApi', '/blogs/object/' + uuid)
+        setContentState(JSON.parse(resData.content))
+        console.log(resData)
+        setTitle(resData.title)
+        setLoading(false)
+    }
+
+    useEffect(() => {
+        fetchBlog()
+    }, []);
 
 
     return (
+        (loading ? <>Loading...</> :
         <div className='page'>
-            <h1>Create a blog</h1>
-            <CustomEditor onChange={onChange}/>
-            
+            <h1>Update a blog</h1>
+            <input value={title} onChange={(e) => setTitle(e.target.value)} />
+            <CustomEditor onChange={onChange} contentState={contentState}/>
+            <Button onClick={handleSubmit}>Submit</Button>
             <Button onClick={signOut}>Sign out</Button>
         </div>
+        )
+
     )
 }
 

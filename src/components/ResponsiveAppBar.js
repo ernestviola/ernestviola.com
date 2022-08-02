@@ -48,7 +48,7 @@ const ResponsiveAppBar = ({signOut,user}) => {
             ) : (
               <>
                 <Tabs sx={{marginLeft:'auto'}} textColor='inherit' value={value} indicatorColor='primary'>
-                  <Tab key={0} label='Blog' component={Link} to='/blogs'/>
+                  <Tab key={0} label='Blogs' component={Link} to='/blogs'/>
                   <Tab key={1} label='Projects' component={Link} to='/projects'/>
                 </Tabs>
               </>

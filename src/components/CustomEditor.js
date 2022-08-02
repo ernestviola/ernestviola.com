@@ -12,16 +12,8 @@ import '@aws-amplify/ui-react/styles.css';
 
 const CustomEditor = (props) => {
     const [editorState, setEditorState] = useState(props.contentState ? EditorState.createWithContent(convertFromRaw(props.contentState)) : EditorState.createEmpty())
-    
-    // useState(props.contentState ? EditorState.createWithContent(convertFromRaw(props.contentState)) : EditorState.createEmpty())
-    
     const [emojiPlugin, setEmojiPlugin] = useState(createEmojiPlugin())
     const { EmojiSuggestions } = emojiPlugin
-
-    // const updatePost = () => {
-    //     const contentState = convertToRaw(this.state.editorState.getCurrentContent())
-    //     console.log('content state', contentState);
-    // }
 
     const onChange = (editorState) => {
         setEditorState(editorState)

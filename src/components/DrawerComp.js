@@ -14,7 +14,7 @@ const DrawerComp = () => {
     <React.Fragment>
         <Drawer open={openDrawer} onClose={()=>setOpenDrawer(false)}>
             <List>
-                <ListItemButton  onClick={()=>setOpenDrawer(false)} key={0} component={Link} to='/blogs'><ListItemText>Blog</ListItemText></ListItemButton>
+                <ListItemButton  onClick={()=>setOpenDrawer(false)} key={0} component={Link} to='/blogs'><ListItemText>Blogs</ListItemText></ListItemButton>
                 <ListItemButton onClick={()=>setOpenDrawer(false)} key={1} component={Link} to='/projects'><ListItemText>Projects</ListItemText></ListItemButton>
             </List>
         </Drawer>
