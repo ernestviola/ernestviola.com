@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
 
 import { EditorState, RichUtils, convertToRaw, convertFromRaw } from "draft-js";
 import Editor from "@draft-js-plugins/editor";
 import createEmojiPlugin from "@draft-js-plugins/emoji";
-
-import { Button } from '@aws-amplify/ui-react';
+import createInlineToolbarPlugin from '@draft-js-plugins/inline-toolbar';
 
 import '../styles/CustomEditor.css'
 import '@aws-amplify/ui-react/styles.css';
@@ -13,6 +11,7 @@ import '@aws-amplify/ui-react/styles.css';
 const CustomEditor = (props) => {
     const [editorState, setEditorState] = useState(props.contentState ? EditorState.createWithContent(convertFromRaw(props.contentState)) : EditorState.createEmpty())
     const [emojiPlugin, setEmojiPlugin] = useState(createEmojiPlugin())
+    const [inlineToolbarPlugin, setInlineToolbarPlugin] = useState(createInlineToolbarPlugin())
     const { EmojiSuggestions } = emojiPlugin
 
     const onChange = (editorState) => {
@@ -34,14 +33,6 @@ const CustomEditor = (props) => {
         return 'not handled';
     }
 
-    const onUnderlineClick = () => {
-        onChange(RichUtils.toggleInlineStyle(editorState, 'UNDERLINE'))
-    }
-
-    const onToggleCode = () => {
-        onChange(RichUtils.toggleCode(editorState));
-    }
-
     useEffect(() => {
         console.log(props.contentState)
     },[])
@@ -49,13 +40,11 @@ const CustomEditor = (props) => {
 
     return (
         <div>
-            {/* <button onClick={onToggleCode}>Code Block</button>
-            <button onClick={onUnderlineClick}>Underline</button> */}
             <Editor
                 editorState={editorState}
                 handleKeyCommand={handleKeyCommand}
                 onChange={onChange}
-                plugins={[emojiPlugin]}
+                plugins={[emojiPlugin,inlineToolbarPlugin]}
                 readOnly={props.readOnly}
             />
             <EmojiSuggestions warn />
