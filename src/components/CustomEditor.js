@@ -49,8 +49,8 @@ const CustomEditor = (props) => {
 
     return (
         <div>
-            <button onClick={onToggleCode}>Code Block</button>
-            <button onClick={onUnderlineClick}>Underline</button>
+            {/* <button onClick={onToggleCode}>Code Block</button>
+            <button onClick={onUnderlineClick}>Underline</button> */}
             <Editor
                 editorState={editorState}
                 handleKeyCommand={handleKeyCommand}
