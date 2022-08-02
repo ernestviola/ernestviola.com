@@ -13,6 +13,7 @@ import '@aws-amplify/ui-react/styles.css';
 const CustomEditor = (props) => {
     const [editorState, setEditorState] = useState(props.contentState ? EditorState.createWithContent(convertFromRaw(props.contentState)) : EditorState.createEmpty())
     
+    // useState(props.contentState ? EditorState.createWithContent(convertFromRaw(props.contentState)) : EditorState.createEmpty())
     
     const [emojiPlugin, setEmojiPlugin] = useState(createEmojiPlugin())
     const { EmojiSuggestions } = emojiPlugin
@@ -24,7 +25,10 @@ const CustomEditor = (props) => {
 
     const onChange = (editorState) => {
         setEditorState(editorState)
-        props.onChange(convertToRaw(editorState.getCurrentContent()))
+        if (props.onChange) {
+            props.onChange(convertToRaw(editorState.getCurrentContent()))
+        }
+        
     }
 
     const handleKeyCommand = (command) => {
@@ -45,6 +49,10 @@ const CustomEditor = (props) => {
     const onToggleCode = () => {
         onChange(RichUtils.toggleCode(editorState));
     }
+
+    useEffect(() => {
+        console.log(props.contentState)
+    },[])
 
 
     return (

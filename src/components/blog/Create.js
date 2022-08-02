@@ -14,6 +14,7 @@ import '../../styles/blog/Create.css'
 const Create = ({ signOut, user }) => {
 
   const [contentState, setContentState] = useState('')
+  const [title, setTitle] = useState('')
 
   const onChange = (data) => {
     setContentState(data)
@@ -30,6 +31,7 @@ const Create = ({ signOut, user }) => {
     const res = await API.post('blogsApi', '/blogs', {
       body: {
         uuid,
+        title,
         content: contentText,
         added_at: date,
         updated_at: date
@@ -45,6 +47,7 @@ const Create = ({ signOut, user }) => {
   return (
     <div className='page'>
       <h1>Create a blog</h1>
+      <input value={title} onChange={(e) => setTitle(e.target.value)} />
       <CustomEditor onChange={onChange} />
       <Button onClick={handleSubmit}>Publish</Button>
       <Button onClick={signOut}>Sign out</Button>
