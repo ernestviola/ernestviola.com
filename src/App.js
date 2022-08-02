@@ -16,6 +16,7 @@ import Createblog from './components/blog/Create';
 import Readblog from './components/blog/Read'
 import Updateblog from './components/blog/Update';
 
+import Login from './components/authorization/Login'
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Footer from './components/footer/Footer';
@@ -29,13 +30,14 @@ function App() {
             <Route path='/' element={<Home/>} />
             
             <Route path='/blogs' element={<Blogs/>} />
-            
             <Route path='/blog/create' element={<Createblog/>} />
             <Route path='/blog/:uuid' element={<Readblog/>} />
             <Route path='/blog/update/:uuid' element={<Updateblog/>} />
 
             <Route path='/projects' element={<Projects/>} />
-            
+
+            <Route path='/login' element={<Login/>} />
+
             <Route path ='*' element={<NotFound/>} />
           </Routes>
         </BrowserRouter>

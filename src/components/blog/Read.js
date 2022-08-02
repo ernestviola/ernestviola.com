@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 
-
+import { Auth } from 'aws-amplify';
+import { Button } from '@aws-amplify/ui-react';
 import { useParams } from 'react-router-dom';
 
 import { API } from 'aws-amplify';
 import CustomEditor from '../CustomEditor';
+
+
 
 const Read = ({ signOut, user }) => {
   const [contentState, setContentState] = useState('')
@@ -39,9 +43,18 @@ const Read = ({ signOut, user }) => {
     setIsLoading(false)
   }
 
+  const checkAuthenticated = async () => {
+    try {
+      await Auth.currentAuthenticatedUser
+      return true
+    } catch {
+      return false
+    }
+  }
+
   useEffect(() => {
     fetchBlog()
-    console.log(user)
+    setIsAuthenticated(checkAuthenticated())
   }, []);
 
 
@@ -50,6 +63,14 @@ const Read = ({ signOut, user }) => {
       <>Loding...</> :
       <div className='page'>
         <CustomEditor readOnly={true} contentState={contentState} onChange={onChange} />
+        {isAuthenticated ?
+          <>
+            <Button onClick={handleSubmit}>Submit</Button>
+            <Button onClick={signOut}>Sign out</Button>
+          </>
+          :
+          <></>
+        }
       </div>
     )
   )
