@@ -15,6 +15,7 @@ import CustomEditor from '../CustomEditor';
 const Read = () => {
   const [contentState, setContentState] = useState('')
   const [title, setTitle] = useState('')
+  const [blog, setBlog] = useState()
   const [isLoading, setIsLoading] = useState(true)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [readOnly, setReadOnly] = useState(true)
@@ -35,7 +36,8 @@ const Read = () => {
         uuid,
         title,
         content: contentText,
-        updated_at: date
+        updated_at: date,
+        added_at: blog.added_at,
       }
     })
 
@@ -71,6 +73,7 @@ const Read = () => {
     const resData = await API.get('blogsApi', '/blogs/object/' + uuid)
     setContentState(JSON.parse(resData.content))
     setTitle(resData.title)
+    setBlog(resData)
     setIsLoading(false)
   }
 

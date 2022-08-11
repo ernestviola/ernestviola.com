@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import Lists from '../List';
 import SearchBar from '../SearchBar';
+import '../../styles/blog/Blogs.css'
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([])
@@ -17,6 +18,11 @@ const Blogs = () => {
     setIsLoading(false)
   }
 
+  const formatDate = (datetime) => {
+    let d = new Date(datetime)
+    return d.toString()
+  }
+
   useEffect(() => {
     fetchBlogs()
   }, []);
@@ -25,10 +31,10 @@ const Blogs = () => {
     (isLoading ? <>Loading...</> :
       <div className="page">
         <h1>Blogs</h1>
-        <ul>
+        <ul className='blogs'>
           {blogs.map(blog =>
             <li key={blog.uuid}>
-              <Link to={`/blog/${blog.uuid}`}>{blog.title}</Link>
+              <Link to={`/blog/${blog.uuid}`}>{new Date(blog.added_at).toLocaleDateString()} - {blog.title}</Link>
             </li>
           )}
         </ul>
