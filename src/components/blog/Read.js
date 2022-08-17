@@ -8,11 +8,6 @@ import { useParams } from 'react-router-dom';
 import { API } from 'aws-amplify';
 import CustomEditor from '../CustomEditor';
 
-import '../../styles/blog/Read.css'
-
-
-
-
 
 const Read = () => {
   const [contentState, setContentState] = useState('')

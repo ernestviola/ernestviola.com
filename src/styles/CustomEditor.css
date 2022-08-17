@@ -1,3 +1,7 @@
+.DraftEditor-root {
+  margin-bottom: 20px;
+}
+
 div.DraftEditor-root {
   border: 1px solid #000;
   background-color: beige;
