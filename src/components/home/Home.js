@@ -44,7 +44,7 @@ const Home = () => {
               
               <p>My dad, also named Ernest, always said to leave a place better than how you found it. That's my goal in life, to make an impact on the world around me and to be a positive influence.</p>
 
-              <p>I will be making a <Link to='/blogs'>blog</Link> soon and hopefully my writing won't be that atrocies. I never got an A in writing class but who cares.</p>
+              <p>I will be making a <Link to='/blogs'>blog</Link> soon and hopefully my writing won't be that atrocious. I never got an A in writing class but who cares.</p>
           </div>
 
     </div>
