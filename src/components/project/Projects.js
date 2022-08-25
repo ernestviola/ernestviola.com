@@ -7,8 +7,7 @@ const Projects = () => {
       <h1>Blogs</h1>
       <ul className='blogs'>
         <li key={1}>
-          
-          <a href='https://main.d2x5veo5ef99gu.amplifyapp.com/' target={'_blank'}>Algorithm Visualizer</a>
+          <p><a href='https://main.d2x5veo5ef99gu.amplifyapp.com/' target={'_blank'}>Algorithm Visualizer</a> - A visualization app for demonstrating knowledge of algorithms.</p>
         </li>
       </ul>
     </div >
