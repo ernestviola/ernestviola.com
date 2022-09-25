@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Auth } from 'aws-amplify';
 
 const Logout = () => {
+    const [authStatus,setAuthStatus] = useState('page loaded');
+    
     async function SignOut() {
         try {
-            await Auth.signOut();
+            const response = await Auth.signOut();
+            setAuthStatus(JSON.stringify(response))
+            console.log(response)
+
         } catch (error) {
-            console.log('error signing out: ', error);
+            // console.log('error signing out: ', error);
+            setAuthStatus(JSON.stringify(error))
         }
     }
+
+    useEffect( () => {
+        SignOut()
+    },[])
   return (
     <div>
-        <button onClick={SignOut}>Log Out</button>
-        Help
+        {authStatus}
     </div>
   )
 }

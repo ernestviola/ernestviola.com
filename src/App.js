@@ -17,6 +17,7 @@ import Readblog from './components/blog/Read'
 import Updateblog from './components/blog/Update';
 
 import Login from './components/authorization/Login'
+import Logout from './components/authorization/Logout'
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Footer from './components/footer/Footer';
@@ -35,8 +36,10 @@ function App() {
             <Route path='/blog/update/:uuid' element={<Updateblog/>} />
 
             <Route path='/projects' element={<Projects/>} />
-
+            
             <Route path='/login' element={<Login/>} />
+            <Route path='/logout' element={<Logout/>} />
+            
 
             <Route path ='*' element={<NotFound/>} />
           </Routes>
