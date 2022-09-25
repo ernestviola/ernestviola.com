@@ -10,10 +10,9 @@ div.DraftEditor-root {
   /* overflow-y: auto; */
 }
 
-div.DraftEditor-root-editing {
+div.notranslate {
   border: 1px solid #000;
   background-color: beige;
-  /* overflow-y: auto; */
 }
 
 div.DraftEditor-editorContainer,
