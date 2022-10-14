@@ -6,14 +6,6 @@ import createEmojiPlugin from "@draft-js-plugins/emoji";
 import createInlineToolbarPlugin from '@draft-js-plugins/inline-toolbar';
 import createSideToolbarPlugin from '@draft-js-plugins/side-toolbar';
 
-// import {
-//     ItalicButton,
-//     BoldButton,
-//     UnderlineButton,
-//     CodeButton
-//   } from "draft-js-buttons";
-
-
 import '../styles/CustomEditor.css';
 import '@aws-amplify/ui-react/styles.css';
 import '@draft-js-plugins/inline-toolbar/lib/plugin.css';

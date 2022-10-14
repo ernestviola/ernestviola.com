@@ -34,7 +34,7 @@ const Blogs = () => {
         <ul className='blogs'>
           {blogs.map(blog =>
             <li key={blog.uuid}>
-              <Link to={`/blog/${blog.uuid}`}>{new Date(blog.added_at).toLocaleDateString()} - {blog.title}</Link>
+              <p><Link to={`/blog/${blog.uuid}`}>{new Date(blog.added_at).toLocaleDateString()} - {blog.title}</Link></p>
             </li>
           )}
         </ul>
