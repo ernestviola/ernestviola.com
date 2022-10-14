@@ -94,7 +94,7 @@ const Read = () => {
     (isLoading ?
       <>Loading...</> :
       <div className='page'>
-        {readOnly ? <h1>{title}</h1> : <input value={title} onChange={(e) => setTitle(e.target.value)} />}
+        {readOnly ? '' : <input value={title} onChange={(e) => setTitle(e.target.value)} />}
         <CustomEditor readOnly={readOnly} contentState={contentState} onChange={onChange} />
         {isAuthenticated ?
           <>
