@@ -17,7 +17,7 @@ import createSideToolbarPlugin from '@draft-js-plugins/side-toolbar';
 import '../styles/CustomEditor.css';
 import '@aws-amplify/ui-react/styles.css';
 import '@draft-js-plugins/inline-toolbar/lib/plugin.css';
-import '@draft-js-plugins/inline-toolbar/lib/plugin.css';
+import '@draft-js-plugins/side-toolbar/lib/plugin.css';
 
 const CustomEditor = (props) => {
     const [editorState, setEditorState] = useState(props.contentState ? EditorState.createWithContent(convertFromRaw(props.contentState)) : EditorState.createEmpty())

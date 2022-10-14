@@ -19,7 +19,7 @@ div.DraftEditor-editorContainer,
 div.public-DraftEditor-content {
   min-height: inherit;
 }
-
+/* 
 button {
   background: #999;
   color: #fff;
@@ -34,3 +34,4 @@ button {
 button:hover {
   background: #888;
 }
+ */
