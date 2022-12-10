@@ -1,7 +1,9 @@
 .nav {
-    background: #F4F0E8 !important;
+    background: #F5F5F5 !important;
     color: black !important;
     position: sticky !important;
+    box-shadow: none !important;
+    border-bottom: groove !important;
 }
 
 
