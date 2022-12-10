@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import { API, Auth } from 'aws-amplify';
-import axios from "axios";
+import { API } from 'aws-amplify';
 
 import { Link } from 'react-router-dom';
-import Lists from '../List';
-import SearchBar from '../SearchBar';
+// import Lists from '../List';
+// import SearchBar from '../SearchBar';
 import '../../styles/blog/Blogs.css'
 
 const Blogs = () => {
@@ -14,13 +13,9 @@ const Blogs = () => {
 
   const fetchBlogs = async () => {
     const resData = await API.get('blogsApi', '/blogs/uuid')
+    resData.sort((a,b) => a.added_at - b.added_at)
     setBlogs(resData)
     setIsLoading(false)
-  }
-
-  const formatDate = (datetime) => {
-    let d = new Date(datetime)
-    return d.toString()
   }
 
   useEffect(() => {
