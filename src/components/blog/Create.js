@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ReactMarkdown from 'react-markdown'
+import { useNavigate, Navigate } from 'react-router-dom';
 
 import { API } from 'aws-amplify';
 import { v4 as uuidv4 } from 'uuid';
@@ -15,6 +15,8 @@ const Create = ({ signOut, user }) => {
 
   const [contentState, setContentState] = useState('')
   const [title, setTitle] = useState('')
+  const [isSubmit, setIsSubmit] = useState(false)
+  const [url, setUrl] = useState('')
 
   const onChange = (data) => {
     setContentState(data)
@@ -27,6 +29,8 @@ const Create = ({ signOut, user }) => {
     e.preventDefault()
 
     let uuid = uuidv4();
+    setUrl('/blog/'+uuid)
+    setIsSubmit(true)
 
     const res = await API.post('blogsApi', '/blogs', {
       body: {
@@ -45,14 +49,15 @@ const Create = ({ signOut, user }) => {
 
 
   return (
+    (!isSubmit ? 
     <div className='page'>
       <h1>Create a blog</h1>
       <input value={title} onChange={(e) => setTitle(e.target.value)} />
       <CustomEditor onChange={onChange} />
       <Button onClick={handleSubmit}>Publish</Button>
       <Button onClick={signOut}>Sign out</Button>
-    </div>
-  )
+    </div> : (<><Navigate to={url} /></>)
+  ))
 }
 
 export default withAuthenticator(Create)
