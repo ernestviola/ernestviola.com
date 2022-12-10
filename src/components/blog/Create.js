@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import { API } from 'aws-amplify';
 import { v4 as uuidv4 } from 'uuid';
