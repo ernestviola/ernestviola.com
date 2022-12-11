@@ -3,6 +3,8 @@ import '../../styles/Home.css'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import Contact from './Contact';
+
 import deathValley from '../../images/deathValley.jpg';
 import deathValleySmall from '../../images/deathValleySmall.jpg';
 
@@ -46,6 +48,7 @@ const Home = () => {
 
               <p>I will be making a <Link to='/blogs'>blog</Link> soon and hopefully my writing won't be that atrocious. I never got an A in writing class but who cares.</p>
           </div>
+
 
     </div>
 
