@@ -19,8 +19,8 @@ import Updateblog from './components/routes/blog/Update';
 import Login from './components/routes/authorization/Login'
 import Logout from './components/routes/authorization/Logout'
 
-import ResponsiveAppBar from './components/customComponents/ResponsiveAppBar';
-import Footer from './components/footer/Footer';
+import ResponsiveAppBar from './components/customComponents/navbar/ResponsiveAppBar';
+import Footer from './components/customComponents/footer/Footer';
 
 function App() {
   return (

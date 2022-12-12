@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Drawer, IconButton, List, ListItemButton, ListItemText } from '@mui/material'
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import MenuIcon from '@mui/icons-material/Menu';
 

@@ -1,4 +1,4 @@
-import '../../styles/ResponsiveAppBar.css'
+import '../../../styles/ResponsiveAppBar.css'
 import React, {useEffect, useState} from 'react'
 
 import {AppBar, Tab, Tabs, Toolbar, useMediaQuery, useTheme} from '@mui/material'
