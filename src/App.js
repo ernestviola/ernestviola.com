@@ -7,17 +7,17 @@ import {
 } from "react-router-dom";
 
 
-import Home from './components/home/Home';
-import NotFound from './components/notfound/NotFound'
-import Projects from './components/project/Projects';
+import Home from './components/routes/home/Home';
+import NotFound from './components/routes/notfound/NotFound'
+import Projects from './components/routes/project/Projects';
 
-import Blogs from './components/blog/Blogs';
-import Createblog from './components/blog/Create';
-import Readblog from './components/blog/Read'
-import Updateblog from './components/blog/Update';
+import Blogs from './components/routes/blog/Blogs';
+import Createblog from './components/routes/blog/Create';
+import Readblog from './components/routes/blog/Read'
+import Updateblog from './components/routes/blog/Update';
 
-import Login from './components/authorization/Login'
-import Logout from './components/authorization/Logout'
+import Login from './components/routes/authorization/Login'
+import Logout from './components/routes/authorization/Logout'
 
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Footer from './components/footer/Footer';

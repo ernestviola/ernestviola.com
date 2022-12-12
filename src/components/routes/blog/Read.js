@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
 
 import { Auth } from 'aws-amplify';
-import { withAuthenticator, Button } from '@aws-amplify/ui-react';
+import { Button } from '@aws-amplify/ui-react';
 import { useParams } from 'react-router-dom';
 
 import { API } from 'aws-amplify';
-import CustomEditor from '../CustomEditor';
+import CustomEditor from '../../CustomEditor';
 
 
 const Read = () => {

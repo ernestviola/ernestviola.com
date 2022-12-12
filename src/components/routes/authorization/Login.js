@@ -1,9 +1,9 @@
 import React, {useState,useEffect} from 'react'
 import { Auth } from 'aws-amplify';
 
-import { useNavigate, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 const Login = () => {

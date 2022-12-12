@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
 
 import { API } from 'aws-amplify';
 
@@ -7,11 +6,11 @@ import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 
 import { useParams } from 'react-router-dom';
 
-import CustomEditor from '../CustomEditor';
+import CustomEditor from '../../CustomEditor';
 
 
 import '@aws-amplify/ui-react/styles.css';
-import '../../styles/blog/Create.css'
+import '../../../styles/blog/Create.css'
 
 const Update = ({ signOut, user }) => {
     const [contentState, setContentState] = useState('')

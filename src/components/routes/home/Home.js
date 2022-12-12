@@ -1,12 +1,10 @@
-import '../../styles/Home.css'
-
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import Contact from './Contact';
+import '../../../styles/Home.css'
 
-import deathValley from '../../images/deathValley.jpg';
-import deathValleySmall from '../../images/deathValleySmall.jpg';
+import deathValley from '../../../images/deathValley.jpg';
+import deathValleySmall from '../../../images/deathValleySmall.jpg';
 
 
 const Home = () => {

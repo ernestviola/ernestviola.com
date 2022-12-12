@@ -5,7 +5,7 @@ import { API } from 'aws-amplify';
 import { Link } from 'react-router-dom';
 // import Lists from '../List';
 // import SearchBar from '../SearchBar';
-import '../../styles/blog/Blogs.css'
+import '../../../styles/blog/Blogs.css'
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([])

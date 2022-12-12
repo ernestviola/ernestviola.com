@@ -5,11 +5,11 @@ import { API } from 'aws-amplify';
 import { v4 as uuidv4 } from 'uuid';
 
 import { withAuthenticator, Button } from '@aws-amplify/ui-react';
-import CustomEditor from '../CustomEditor';
+import CustomEditor from '../../CustomEditor';
 
 
 import '@aws-amplify/ui-react/styles.css';
-import '../../styles/blog/Create.css'
+import '../../../styles/blog/Create.css'
 
 const Create = ({ signOut, user }) => {
 
