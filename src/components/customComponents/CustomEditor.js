@@ -6,7 +6,7 @@ import createEmojiPlugin from "@draft-js-plugins/emoji";
 import createInlineToolbarPlugin from '@draft-js-plugins/inline-toolbar';
 import createSideToolbarPlugin from '@draft-js-plugins/side-toolbar';
 
-import '../styles/CustomEditor.css';
+import '../../styles/CustomEditor.css';
 import '@aws-amplify/ui-react/styles.css';
 import '@draft-js-plugins/inline-toolbar/lib/plugin.css';
 import '@draft-js-plugins/side-toolbar/lib/plugin.css';

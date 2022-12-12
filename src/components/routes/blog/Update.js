@@ -6,7 +6,7 @@ import { withAuthenticator, Button } from '@aws-amplify/ui-react';
 
 import { useParams } from 'react-router-dom';
 
-import CustomEditor from '../../CustomEditor';
+import CustomEditor from '../../customComponents/CustomEditor';
 
 
 import '@aws-amplify/ui-react/styles.css';

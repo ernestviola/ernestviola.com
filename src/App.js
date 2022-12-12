@@ -19,7 +19,7 @@ import Updateblog from './components/routes/blog/Update';
 import Login from './components/routes/authorization/Login'
 import Logout from './components/routes/authorization/Logout'
 
-import ResponsiveAppBar from './components/ResponsiveAppBar';
+import ResponsiveAppBar from './components/customComponents/ResponsiveAppBar';
 import Footer from './components/footer/Footer';
 
 function App() {

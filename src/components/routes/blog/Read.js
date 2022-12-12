@@ -5,7 +5,7 @@ import { Button } from '@aws-amplify/ui-react';
 import { useParams } from 'react-router-dom';
 
 import { API } from 'aws-amplify';
-import CustomEditor from '../../CustomEditor';
+import CustomEditor from '../../customComponents/CustomEditor';
 
 
 const Read = () => {
