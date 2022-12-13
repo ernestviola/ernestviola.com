@@ -12,7 +12,7 @@ const ImageLoader = (props) => {
 
     img.onload = () => {
         setBlur(false)
-        setSrc(props.large);
+        setSrc(props.large)
     };
 
     return (

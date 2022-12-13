@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import About from './About';
+
+
 import '../../../styles/Home.css'
 
 import deathValley from '../../../images/deathValley.jpg';
@@ -26,6 +29,10 @@ const Home = () => {
     <div>
       <ImageLoader small={deathValleySmall} large={deathValley}/>
       <div className='page'>
+
+        <About />
+        <h1>Projects</h1>
+        <h1>Contact</h1>
             
               <h1>About Me</h1>
               <p>First of all, welcome to my website! I am an aspiring <b>software engineer</b> and an aspiring old person, by that I really mean an aspiring <b>storyteller</b>. I hope that with this blog I can showcase some of my <Link to='/projects'>projects</Link> as well as add a bit of personality to some of the things I experience in life.</p>
