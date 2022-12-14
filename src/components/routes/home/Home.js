@@ -4,30 +4,14 @@ import { Link } from 'react-router-dom'
 import About from './About';
 
 
-import '../../../styles/Home.css'
+import './styles/Home.css'
 
-import deathValley from '../../../images/deathValley.jpg';
-import deathValleySmall from '../../../images/deathValleySmall.jpg';
-import ImageLoader from '../../customComponents/imageLoader/ImageLoader';
+
 
 
 const Home = () => {
-  const [src, setSrc] = useState(deathValleySmall);
-  const [blur, setBlur] = useState(true);
-
-  const img = new Image()
-
-  img.src = deathValley;
-  
-  img.onload = () => {
-    setBlur(false)
-    setSrc(deathValley);
-  };
-
-  // style={{backgroundImage: `url(${deathValley})`}}
   return (
     <div>
-      <ImageLoader small={deathValleySmall} large={deathValley}/>
       <div className='page'>
 
         <About />
