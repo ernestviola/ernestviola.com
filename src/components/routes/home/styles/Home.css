@@ -16,3 +16,8 @@
 .mobile {
     display: block;
 }
+
+.quote {
+    font-weight: bold;
+    font-size: 25px;
+}
