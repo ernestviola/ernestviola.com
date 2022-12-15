@@ -16,7 +16,8 @@ const Home = () => {
           <Fragment>
             <p>Growing up, I was always observing and asking questions about the world and my environment., but the question that has been on my mind as of lately is <span className='quote'>"What can I do in my power do to make the world a better place?"</span> I really believe that my skills with tech and my grit towards doing the impossible is what makes me standout.</p>
             <p>So if you have a social, environmental, or a project that you believe will make the world a better place to live in, then please reach out to me.</p>
-          </Fragment>} />
+          </Fragment>}
+        />
 
         <h1>Projects</h1>
         <h1>Contact</h1>
