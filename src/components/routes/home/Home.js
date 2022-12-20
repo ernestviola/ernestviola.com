@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import SimpleContentContainer from '../../customComponents/contentContainers/SimpleContentContainer';
 
+import Project from './Project';
+
 import './styles/Home.css'
 
 
@@ -19,7 +21,8 @@ const Home = () => {
           </Fragment>}
         />
 
-        <h1>Projects</h1>
+        
+        < Project />
         <h1>Contact</h1>
 
         <h1>About Me</h1>
