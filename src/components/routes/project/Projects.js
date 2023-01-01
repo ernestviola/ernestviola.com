@@ -9,7 +9,7 @@ const Projects = () => {
           <p><a href='https://main.d2x5veo5ef99gu.amplifyapp.com/' target={'_blank'} rel='noreferrer'>Algorithm Visualizer</a> - A visualization app for demonstrating knowledge of algorithms.</p>
         </li>
         <li key={2}>
-          <p><a href='https://viola-weather-application.herokuapp.com/' target={'_blank'} rel='noreferrer'>Weather App</a> - A weather app made with node and handlebars which uses an entered location to find the time and temperature.</p>
+          <p><a href='http://weatherapp-env.eba-xvgfx2gu.us-east-1.elasticbeanstalk.com/' target={'_blank'} rel='noreferrer'>Weather App</a> - A weather app made with node and handlebars which uses an entered location to find the time and temperature.</p>
         </li>
       </ul>
     </div >
