@@ -10,7 +10,7 @@
 .carousel-item {
     display: inline-flex;
     align-items: center;
-    height: 200px;
+    height: 500px;
     justify-content: center;
     background-color: green;
     color: white;
