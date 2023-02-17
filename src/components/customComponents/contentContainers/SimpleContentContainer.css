@@ -1,8 +1,16 @@
 .simpleContentContainer {
     /* border-style: solid; */
     border-radius: 15px;
-    background-color: white;
-    box-shadow: 5px 5px 50px 5px grey;
+    background-color: #FAF9F6;
+    box-shadow: 5px 5px 25x 5px grey;
     padding: 10px;
     margin: 20px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
 }

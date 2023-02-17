@@ -1,15 +1,18 @@
 .nav {
-    background: #F5F5F5 !important;
-    color: black !important;
+    background: #ffffff !important;
+    /* color: black !important; */
     position: sticky !important;
     box-shadow: none !important;
     border-bottom: groove !important;
 }
 
+a {
+    text-decoration: none;
+}
 
-/* .navContent {
-    margin: 0 15vw 0 15vw;
-} */
+a:visited {
+    color: #45462A;
+}
 
 @media only screen and (min-width: 768px) {
     .navContent {
