@@ -5,8 +5,6 @@ import {AppBar, Tab, Tabs, Toolbar, useMediaQuery, useTheme} from '@mui/material
 import DrawerComp from './DrawerComp';
 
 import { Link, useLocation } from 'react-router-dom';
-
-import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 const ResponsiveAppBar = ({signOut,user}) => {

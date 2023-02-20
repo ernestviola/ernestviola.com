@@ -26,7 +26,6 @@ function App() {
   return (
       <div className='wrapper'>
         <BrowserRouter>
-          <ResponsiveAppBar />
           <Routes>
             <Route path='/' element={<Home/>} />
             
