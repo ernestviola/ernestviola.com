@@ -1,7 +1,7 @@
 /* Page Styling */
 
-body {
-  background-color: #ffffff;
+.root {
+  min-height: 100% !important;
 }
 
 .page {

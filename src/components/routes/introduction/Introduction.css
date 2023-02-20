@@ -1,0 +1,19 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: red; */
+}
+
+.introduction {
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s ease;
+
+}
+
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+  }

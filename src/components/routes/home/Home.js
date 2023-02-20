@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 
 import SimpleContentContainer from '../../customComponents/contentContainers/SimpleContentContainer';
-import Carousel, {CarouselItem} from '../../customComponents/carousel/Carousel'
+import Carousel, { CarouselItem } from '../../customComponents/carousel/Carousel'
 
 import './styles/Home.css'
 
@@ -19,19 +19,19 @@ const Home = () => {
         />
         <SimpleContentContainer title="Hi I'm Working on _blank_" content={
           <Fragment>
-            <div style={{display:'flex', flexWrap:'nowrap'}}>
-              <Carousel > 
-                <CarouselItem>Item 1</CarouselItem>  
-                <CarouselItem>Item 2</CarouselItem>  
-                <CarouselItem>Item 3</CarouselItem>  
+            <div style={{ display: 'flex', flexWrap: 'nowrap' }}>
+              <Carousel >
+                <CarouselItem>Item 1</CarouselItem>
+                <CarouselItem>Item 2</CarouselItem>
+                <CarouselItem>Item 3</CarouselItem>
               </Carousel >
             </div>
-            
-          </Fragment>} 
+
+          </Fragment>}
         />
 
-        
-         {/* < Project /> */}
+
+        {/* < Project /> */}
       </div>
 
 
