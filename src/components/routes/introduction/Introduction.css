@@ -9,11 +9,15 @@
 .introduction {
     align-items: center;
     text-align: center;
-    transition: opacity 1s ease;
-
 }
 
-@keyframes fade {
-    0%,100% { opacity: 0 }
-    50% { opacity: 1 }
-  }
+.fadeOut{
+    opacity:0;
+    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+.fadeIn{
+    opacity:1;
+    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+
+}
