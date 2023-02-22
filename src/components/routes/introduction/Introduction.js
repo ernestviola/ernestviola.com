@@ -18,12 +18,10 @@ const Introduction = () => {
   const click = () => {
     setVisible(0)
     
-    
-
     setTimeout(() => {
-      setCount(count + 1)
       setVisible(1)
-    },500)
+      setCount(count + 1)
+    },10)
   }
 
   return (

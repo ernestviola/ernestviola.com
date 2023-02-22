@@ -12,12 +12,12 @@
 }
 
 .fadeOut{
-    opacity:0;
-    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+    /* visibility: hidden; */
+    transition: opacity 0s ease;
+    opacity: 0;
 
 }
 .fadeIn{
-    opacity:1;
-    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
-
+    transition: opacity 2s ease;
+    opacity: 1;
 }
