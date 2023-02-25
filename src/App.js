@@ -6,7 +6,6 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
-import Introduction from './components/routes/introduction/Introduction';
 import Home from './components/routes/home/Home';
 import NotFound from './components/routes/notfound/NotFound'
 import Projects from './components/routes/project/Projects';
@@ -27,8 +26,7 @@ function App() {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Introduction/>} />
-            <Route path='/home' element={<Home/>} />
+            <Route path='/' element={<Home/>} />
             
             <Route path='/blogs' element={<Blogs/>} />
             <Route path='/blog/create' element={<Createblog/>} />
