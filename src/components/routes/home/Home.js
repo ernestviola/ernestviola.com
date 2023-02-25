@@ -3,10 +3,12 @@ import React, { Fragment, useState, useEffect } from 'react'
 import SimpleContentContainer from '../../customComponents/contentContainers/SimpleContentContainer';
 import Carousel, { CarouselItem } from '../../customComponents/carousel/Carousel'
 
-import './styles/Home.css'
+import Contact from './Contact';
+
+import './Home.css'
 const Home = () => {
 
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(3)
   const [visible, setVisible] = useState(false)
   // const [introText,setIntroText] = useState(loop[0])
 
@@ -29,7 +31,7 @@ const Home = () => {
     };
 
     // Check if the page has already loaded
-    if (document.readyState == 'complete') {
+    if (document.readyState === 'complete') {
       onPageLoad();
     } else {
       window.addEventListener('load', onPageLoad);
@@ -37,8 +39,6 @@ const Home = () => {
       return () => window.removeEventListener('load', onPageLoad);
     }
   }, []);
-
-  console.log(count)
 
   return (
     <div>
@@ -70,6 +70,8 @@ const Home = () => {
         }
         { 
           count == 3 && <div className={`${visible ? 'fadeIn' : 'fadeOut'}`}>
+
+            <Contact />
             <SimpleContentContainer title='About' content={
               <Fragment>
                 <p>Software engineering only came later in life and has always been a tool to reach my goals. What I'm truly passionate about are social and environmental projects that bring a net positive impact to people around me. If you have something you're interested in working on don't hestitate to <a href='#contact'>contact me</a>.</p>
