@@ -1,4 +1,4 @@
-.introContent {
+/* .introContent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,20 +7,20 @@
     box-sizing: border-box;
     color: #fff;
     margin: 0;
-  }
+  } */
 
-.desktop {
+/* .desktop {
     display: none;
-}
+} */
 
-.mobile {
+/* .mobile {
     display: block;
-}
+} */
 
-.quote {
+/* .quote {
     font-weight: bold;
     font-size: 25px;
-}
+} */
 
 .scene-container {
     display: flex;
@@ -61,7 +61,7 @@ button {
   display: inline-flex;
   font-size: 16px;
   font-weight: 600;
-  justify-content: center;
+  justify-content: right;
   line-height: 1.25;
   margin: 0;
   min-height: 3rem;
