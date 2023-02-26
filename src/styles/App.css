@@ -13,8 +13,9 @@
 
 @media only screen and (min-width: 768px) {
   .page {
-    margin-left: 20vw;
-    margin-right: 20vw;
+    transform: 2s;
+    margin-left: 5vw;
+    margin-right: 5vw;
   } 
 
 }

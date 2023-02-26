@@ -45,7 +45,7 @@ const Home = () => {
 
       <div className='scene-container' >
         {
-          count == 0 &&
+          count === 0 &&
           <div className={`scene scene-1 ${visible ? 'fadeIn' : 'fadeOut'}`}>
             <h1>Hi, I'm Ernest 👋</h1>
             <button onClick={click} className='answer'>Hi</button>
@@ -53,7 +53,7 @@ const Home = () => {
 
         }
         {
-          count == 1 &&
+          count === 1 &&
           <div className={`scene scene-1 ${visible ? 'fadeIn' : 'fadeOut'}`}>
             <h1>I'm a software engineer</h1>
             <button onClick={click} className='answer'>What have you worked on?</button>
@@ -61,7 +61,7 @@ const Home = () => {
 
         }
         {
-          count == 2 &&
+          count === 2 &&
           <div className={`scene scene-1 ${visible ? 'fadeIn' : 'fadeOut'}`}>
             <h1>My goal is to work on environmental or social projects. If you want to work together reach out!</h1>
             <button onClick={click} className='answer'>See more.</button>
@@ -69,8 +69,7 @@ const Home = () => {
 
         }
         { 
-          count == 3 && <div className={`${visible ? 'fadeIn' : 'fadeOut'}`}>
-
+          count === 3 && <div className={`page ${visible ? 'fadeIn' : 'fadeOut'}`}>
             <Contact />
             <SimpleContentContainer title='About' content={
               <Fragment>

@@ -9,7 +9,7 @@ const Contact = () => {
 
 
     return (
-        <form className='formGroup page'>
+        <form className='formGroup'>
             <h1>Send a message!</h1>
             <div className='inputSection'>
                 <div className='inputSection1'>
