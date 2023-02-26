@@ -21,7 +21,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className='submitSection'>
-                <input className='submit' type='submit' value='Submit' />
+                <input className='submit' type='submit' value='Send' />
             </div>
 
         </form>
