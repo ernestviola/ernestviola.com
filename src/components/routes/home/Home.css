@@ -1,27 +1,3 @@
-/* .introContent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    box-sizing: border-box;
-    color: #fff;
-    margin: 0;
-  } */
-
-/* .desktop {
-    display: none;
-} */
-
-/* .mobile {
-    display: block;
-} */
-
-/* .quote {
-    font-weight: bold;
-    font-size: 25px;
-} */
-
 .scene-container {
     display: flex;
     flex-wrap: wrap;

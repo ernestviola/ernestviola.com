@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Contact from './Contact';
 import './Home.css'
 const Home = () => {
