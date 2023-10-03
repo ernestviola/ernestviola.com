@@ -1,0 +1,14 @@
+
+
+.footer-bottom {
+    border-top: 1px dotted white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}

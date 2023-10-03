@@ -1,0 +1,35 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    font-size: 1.5rem;
+  
+    background: var(--bg-color);
+    color: var(--fg-color);
+  
+    box-shadow: -2px 2px 8px 0px rgb(0 0 0 / 80%);
+  
+    border-bottom: 1px solid var(--highlight-primary);
+  
+    z-index: 1;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+
+
+
+    
+}
+
+.site-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.site-nav > ul > li> a {
+    text-decoration: none;
+}
