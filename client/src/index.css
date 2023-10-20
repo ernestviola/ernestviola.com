@@ -7,7 +7,6 @@
     linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
     linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
 
-  --nav-height: 3rem;
 
   --transition: 250ms ease-out;  
   --transition-long: 500ms ease-out; 
@@ -27,7 +26,6 @@ html {
 }
 
 body {
-  padding-top: var(--nav-height);
   min-height: 100vh;
   background: var(--bg-color);
   color: var(--fg-color);

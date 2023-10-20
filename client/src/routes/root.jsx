@@ -6,12 +6,16 @@ import Projects from './projects'
 import Navbar from '../components/navbar/navbar'
 import Footer from '../components/footer/footer'
 
+import './root.css'
+
 
 const Root = () => {
   return (
     <>
         <Navbar />
-        <Outlet />
+        <div className='content'>
+          <Outlet /> 
+        </div>
         <Footer />
     </>
   )

@@ -6,6 +6,7 @@ import Root from './routes/root';
 import ErrorPage from './routes/error';
 import Home from './routes/home';
 import Projects from './routes/projects';
+import About from './routes/about'
 // import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: '/projects',
                 element: <Projects />
+            },
+            {
+                path: '/about',
+                element: <About />
             }
         ]
     },
