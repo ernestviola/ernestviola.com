@@ -1,35 +1,13 @@
-.intro {
-    /* background-image: url('../images/deathValleySmall.JPG'); */
-    width: 100%;
-    height: 500px;
-    position: relative;
-  }
-  
-.intro img {
-    width: 100%;
-    height: 500px;
-    /* position: relative;
-    background-position: center; */
-    object-fit: cover;
-  }
-  
-.introContent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* left: 50%; */
-    box-sizing: border-box;
-    color: #fff;
-    margin: 0;
-  }
 
-.desktop {
-    display: none;
+.construction {
+  padding-top: 1em;
+  min-height: inherit;
+  font-size: 2em;
+  color: rgb(152, 152, 152);
+  margin: auto;
+  text-align: center;
 }
 
-.mobile {
-    display: block;
+.material-symbols-outlined {
+  font-size: 3em;
 }

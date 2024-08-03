@@ -24,13 +24,13 @@ import Footer from './components/customComponents/footer/Footer';
 
 function App() {
   return (
-      <div className='wrapper'>
+      <div>
         <BrowserRouter>
-          <ResponsiveAppBar />
+          {/* <ResponsiveAppBar /> */}
           <Routes>
             <Route path='/' element={<Home/>} />
             
-            <Route path='/blogs' element={<Blogs/>} />
+            {/* <Route path='/blogs' element={<Blogs/>} />
             <Route path='/blog/create' element={<Createblog/>} />
             <Route path='/blog/:uuid' element={<Readblog/>} />
             <Route path='/blog/update/:uuid' element={<Updateblog/>} />
@@ -38,13 +38,13 @@ function App() {
             <Route path='/projects' element={<Projects/>} />
             
             <Route path='/login' element={<Login/>} />
-            <Route path='/logout' element={<Logout/>} />
+            <Route path='/logout' element={<Logout/>} /> */}
             
 
             <Route path ='*' element={<NotFound/>} />
           </Routes>
         </BrowserRouter>
-        <Footer />
+        {/* <Footer /> */}
       </div>
 
   );

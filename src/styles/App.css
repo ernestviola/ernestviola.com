@@ -1,47 +1,8 @@
 /* Page Styling */
-
+#root {
+  min-height: inherit;
+}
 body {
   background-color: #F5F5F5;
+  margin: 0;
 }
-
-.page {
-  margin-left: 10vw;
-  margin-right: 10vw;
-}
-
-/* Media Query */
-
-@media only screen and (min-width: 768px) {
-  .page {
-    margin-left: 20vw;
-    margin-right: 20vw;
-  } 
-
-}
-
-
-/* Text */
-
-/* h1,h2,h3 {
-  font-family: 'Dancing Script', cursive;
-}
-
-p,span{
-  font-family: 'Roboto', sans-serif;
-} */
-
-a {
-  text-decoration: underline;
-  color: black;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.nav a {
-  text-decoration: none;
-  color: black;
-}
-
-
